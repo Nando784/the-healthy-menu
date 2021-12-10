@@ -1,4 +1,4 @@
-# The Healty Menu
+# The Healthy Menu
 
 This Project aims to create a React Application to search for Vegan Recipes
 
