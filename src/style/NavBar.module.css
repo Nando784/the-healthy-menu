@@ -1,0 +1,41 @@
+.header{
+    color:#302A2C;
+    background-color:#f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 70px;
+}
+
+.link{
+    text-decoration: none;
+    margin: 70px;
+    color: #302A2C;
+}
+
+.link:hover{
+    color: #838383;
+}
+
+p{
+    margin: 10px;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.grRestaurant{
+    margin: 2px;
+    font-size: 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
