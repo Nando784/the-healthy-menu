@@ -1,12 +1,11 @@
-import React from "react";
+import React from 'react';
+import style from '../../style/Header.module.css';
 import NavBar from '../NavBar'
-import PageLogo from '../PageLogo'
 
 function Header() {
   return (
-    <div style={{ backgroundColor: "#f0f0f0" }}>
+    <div className={style.header}>
       <NavBar />
-      <PageLogo />
     </div>
   );
 }

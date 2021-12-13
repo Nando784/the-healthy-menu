@@ -1,10 +1,9 @@
-import Header from './layout/Header'
-import CardContainer from './layout/CardContainer';
+import React from 'react'
 
 function App() {
   return (
     <>
-      <CardContainer />
+          
     </>
   );
 }

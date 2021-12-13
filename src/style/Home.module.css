@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+
+.backgroundImage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  z-index: -1;
+  width: 100%;
+}
+
+
+.titleContainer{
+  text-align: center;
+}
+
+
+.title{
+  font-family: 'Rochester', cursive;
+  margin: 50px;
+  font-size: 96px;
+  color: #000;
+}
+

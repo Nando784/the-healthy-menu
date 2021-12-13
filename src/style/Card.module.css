@@ -1,0 +1,64 @@
+.card{
+
+  border-radius: 10px;
+
+  background: #f2f2f2; /*Da Cambiare*/
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  max-width: 300px;
+  height: 215px;
+  position: relative;
+
+
+  margin: 30px 30px;
+  padding: 20px 15px;
+
+  
+  box-shadow: 0 5px 200px rgba(0, 0, 0, 0.5);
+
+
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover{
+  height: 420px;
+}
+
+.card:hover > .content{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -60px;
+  transition-delay: 0.3s;
+}
+
+.content{
+  position: relative;
+  margin-top: -250px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+
+.imgBx{
+  position: relative;
+  top: -60px;
+  left: 5px;
+  z-index: 1;
+
+  width: 260px;
+  height: 260px;
+  border-radius: 10px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cardImg{
+  max-width: 100%;
+  border-radius: 10px;
+}
