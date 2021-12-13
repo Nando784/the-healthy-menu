@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from './NavBar'
-import PageLogo from './PageLogo'
+import NavBar from '../NavBar'
+import PageLogo from '../PageLogo'
 
 function Header() {
   return (
