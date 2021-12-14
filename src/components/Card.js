@@ -1,18 +1,13 @@
 import React from 'react'
 import style from '../style/Card.module.css'
-import SquareImg from '../images/Square.jpeg'
+import SampleSalad from '../images/SampleSalad.jpg'
 function Card() {
   return (
     <div className={style.card}>
-
       <div className={style.imgBx}>
-        <img
-          className={style.cardImg}
-          src={SquareImg}
-          alt="Food"
-        />
+        <img className={style.cardImg} src={SampleSalad} alt="Food" />
       </div>
-      
+
       <div className={style.content}>
         <h2>Card One</h2>
         <p>
@@ -20,7 +15,6 @@ function Card() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
-
     </div>
   );
 }

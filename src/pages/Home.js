@@ -9,12 +9,6 @@ import CardContainer from '../components/layout/CardContainer';
 function Home() {
   return (
     <div>
-      <img
-        className={styles.backgroundImage}
-        src={Background1920}
-        alt="Background1920"
-      />
-
       <Header />
       <SearchBar />
 
@@ -22,9 +16,13 @@ function Home() {
         <h1 className={styles.title}>The Healthy Menu</h1>
       </Container>
 
+        <img
+          className={styles.backgroundImage}
+          src={Background1920}
+          alt="Background1920"
+        />
 
-    <CardContainer />
-
+      <CardContainer />
     </div>
   );
 }
