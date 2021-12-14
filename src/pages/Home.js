@@ -8,12 +8,9 @@ function Home() {
   return (
     <div>
       <Header />
-
       <BackgroundCarousel />
-
-
-
       <CardContainer />
+      
     </div>
   );
 }
