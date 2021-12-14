@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+
+.caption{
+  position:absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+h1{
+  font-family: 'Rochester', cursive;
+  margin: 50px;
+  font-size: 96px;
+  color: #000;
+  text-shadow: 0 0 5px darkgrey;
+}
+
+
+
+@media screen and (max-width: 990px) {
+  h1{
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 835px) {
+  h1{
+    font-size: 50px;
+  }  
+}
+
+@media screen and (max-width: 576px) {
+  h1{
+    color: #fff;
+    font-size: 40px;
+  }
+}
