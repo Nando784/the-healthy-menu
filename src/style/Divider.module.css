@@ -1,0 +1,15 @@
+.divider {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  height: 80px;
+}
+
+.title {
+  color: #225d62;
+}
