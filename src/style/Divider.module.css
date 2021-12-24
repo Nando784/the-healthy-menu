@@ -1,9 +1,16 @@
-.divider {
-  margin: 20px;
+.divider{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.top{
+  margin-top: 50px;
+}
+
+.bottom{
+  margin-bottom: 200px;
 }
 
 .icon {

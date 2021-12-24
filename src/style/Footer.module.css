@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ABC9CC;
+  color: #225D62;
+  height: 180px;
+}
+
+.title {
+  display: block;
+  text-align: center;
+}
+
+.paragraph {
+  margin-top: 15px;
+}
+
+.social {
+  padding-top: 10px;
+}
+
+.socialIcon{
+  color: #225D62
+}
+
+.socialIcon:hover {
+  color: #4e8a8f
+}
+
+.link {
+  font-size: 30px;
+  margin: 8px;
+}
+
+@media (max-width: 480px) {
+  .paragraph{
+    font-size: 80%
+  }
+}
+
+@media (max-width: 355px) {
+  .paragraph{
+    font-size: 70%
+  }
+  
+  .link{
+    font-size: 25px
+  }
+}
