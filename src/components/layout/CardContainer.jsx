@@ -1,13 +1,14 @@
 import React from 'react'
 import style from '../../style/CardContainer.module.css'
-import Card from '../Card'
 
-function CardContainer() {
+
+function CardContainer(props){
   return (
     <div className={style.cardContainer}>
-      <Card />
-      <Card />
-      <Card />
+      
+      {
+        props.children ? props.children : <p>Nessun Risultato. Riprova</p>
+      }
     </div>
   );
 }

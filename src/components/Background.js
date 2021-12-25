@@ -4,15 +4,15 @@ import RepeatBackground from "../images/RepeatBackground.png";
 function Background() {
   return (
     <>
-      <img
+      <div
         style={{
-          position: 'absolute',
+          position: "absolute",
           top: 0,
           left: 0,
-          zIndex:-1
+          width: "100%",
+          backgroundImage: `url(${RepeatBackground})`,
+          backgroundRepeat: 'repeat-y'
         }}
-        src={RepeatBackground}
-        alt="Background"
       />
     </>
   );
