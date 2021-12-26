@@ -1,38 +1,22 @@
 import React from 'react'
 
-import Background from "../components/Background";
 import Header from "../components/layout/Header";
-import CardContainer from '../components/layout/CardContainer'
-import Card from '../components/Card'
+import CardContainer from "../components/layout/CardContainer";
+import Footer from "../components/layout/Footer";
+
+import utilsStyle from "../style/Utils.module.css";
+
+import { populateCountryes } from "../Libs/Library";
 
 
 function Dietary() {
   return (
-    <div>
-      {
-        //<Background />
-        //<Header />
-      }
+    <div className={utilsStyle.background}>
+      <Header />
 
-      <CardContainer>
-        <Card
-          image=""
-          title="Card One"
-          description="asfas asfjjas asd fa sfafafasfafa fasf safasfasdasdasdasas"
-        />
+      <CardContainer>{populateCountryes()}</CardContainer>
 
-        <Card
-          image=""
-          title="Card One"
-          description="asfasfasfafafasfafafasfsafasfasdasdasdasas"
-        />
-
-        <Card
-          image=""
-          title="Card One"
-          description="asfasfasfafafasfafafasfsafasfasdasdasdasas"
-        />
-      </CardContainer>
+      <Footer white={true} />
     </div>
   );
 }

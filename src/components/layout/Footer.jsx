@@ -3,10 +3,16 @@ import React from "react";
 import style from "../../style/Footer.module.css";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
-function Footer() {
+function Footer({white}) {
   return (
     <>
-      <footer className={style.footer}>
+      <footer className={ 
+        white ? 
+          `${style.footer} ${style.white}`
+        :
+          `${style.footer}` 
+      }>
+
         <div className={style.social}>
           <h5 className={style.title}>
             <strong>in</strong>

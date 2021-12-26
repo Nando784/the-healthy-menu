@@ -5,9 +5,9 @@ import Container from 'react-bootstrap/Container';
 import NavBar from '../NavBar'
 import SearchBar from '../SearchBar'
 
-function Header() {
+function Header({detach}) {
   return (
-    <Container fluid className={style.header}>
+    <Container fluid className={ detach && style.header }>
       <NavBar />
       <SearchBar />
     </Container>

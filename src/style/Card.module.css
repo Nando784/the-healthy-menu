@@ -21,8 +21,6 @@
   width: 260px;
   height: 260px;
   border-radius: 10px;
-
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .cardImg{
@@ -32,13 +30,15 @@
 
 .content{
   text-align: center;
-  color: #111;
+  color: #2f2f2f;
   margin-top: 10px;
   width: 250px;
 }
 
-.title{
 
+.title{
+  width: 250px;
+  color: #2f2f2f;
 }
 
 .description{

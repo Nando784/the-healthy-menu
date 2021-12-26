@@ -11,7 +11,7 @@ import Footer from "../components/layout/Footer";
 function Home() {
   return (
     <div>
-      <Header />
+      <Header detach={true} />
       <BackgroundCarousel />
 
       <BannerContainer />
@@ -21,17 +21,17 @@ function Home() {
         <Card
           image=""
           title="Card One"
-          content="Test test test test test test"
+          description="Test test test test test test"
         />
         <Card
           image=""
           title="Card Two"
-          content="Test test test test test test"
+          description="Test test test test test test"
         />
         <Card
           image=""
           title="Card Three"
-          content="Test test test test test test"
+          description="Test test test test test test"
         />
       </CardContainer>
 
@@ -42,17 +42,17 @@ function Home() {
         <Card
           image=""
           title="Card One"
-          content="Test test test test test test"
+          description="Test test test test test test"
         />
         <Card
           image=""
           title="Card Two"
-          content="Test test test test test test"
+          description="Test test test test test test"
         />
         <Card
           image=""
           title="Card Three"
-          content="Test test test test test test"
+          description="Test test test test test test"
         />
       </CardContainer>
       <Divider category="end" />
