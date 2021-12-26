@@ -1,22 +1,10 @@
 .cardContainer{
   /*width: 1100px;*/
   width: 100%;
-  height: 600px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding: 50px;
-}
-
-@media (max-width: 1194px) {
-  .cardContainer{
-    height: 820px;
-  }
-}
-
-@media (max-width: 834px) {
-  .cardContainer{
-    height: 1300px;
-  }
 }

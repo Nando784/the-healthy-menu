@@ -1,7 +1,7 @@
 import React from 'react'
 import style from '../style/Card.module.css'
 import SampleSalad from '../images/SampleSalad.jpg'
-function Card({image, title, content, open}) {
+function Card({image, title, description}) {
   return (
     <div className={style.card}>
       <div className={style.imgBx}>
@@ -13,9 +13,9 @@ function Card({image, title, content, open}) {
       </div>
 
       <div className={style.content}>
-        <h2>{title}</h2>
-        <p>
-          {content}
+        <h2 className={style.title}>{title}</h2>
+        <p className={style.description}>
+          {description}
         </p>
       </div>
     </div>
