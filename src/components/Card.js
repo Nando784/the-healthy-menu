@@ -7,8 +7,8 @@ function Card({image, title, description}) {
       <div className={style.imgBx}>
         <img className={style.cardImg} src={SampleSalad} alt="Food" />
         {
-        /*Sostituire l'immagine SRC con la props 'image'*/
-        /*MOdifica il css e aggiungi qualche classe. Se la props open è true allora la card deve essere aperta e non con l'animazione*/
+        //Sostituire l'immagine SRC con la props 'image'
+        //Cambiare il design. Non serve la descrizione. Serve solo il titolo e l'immagine. Fai la card un po' piu' piccola e alza l'immagine.
         }
       </div>
 

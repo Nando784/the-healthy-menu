@@ -1,0 +1,59 @@
+Ecco cosa dovrà includere il sito:
+
+Barra di ricerca che permetta di cercare tutte le ricette vegetariane. 
+  => Voglio dire, la base. 
+
+Ogni ricetta cercata dovrà mostrare almeno titolo e immagine di copertina. 
+  => E allora che me ne frega della descrizione. Modifica le card
+
+Cliccare su una ricetta porterà ad una pagina dedicata, dove verranno mostrate ulteriori informazioni. 
+  => Vabe anche questo non dovrebbe essere un problema
+
+Design responsive 
+  => E questo, voglio dire, grazie graziella e grazie al cazzo
+
+React Router 
+  => Gia' Fatto
+
+Axios 
+  => Vabe questo Ez
+
+React Hooks 
+  => Come cazzo li posso usare gli state che non comunica una sega in questo sito ?
+  => Metto l'onClick nell'icona della ricerca e quando cerco aggiorno la pagina con lo useEffect chiamandolo dentro l'onClick. 
+
+                                        function myComponent({ query }) {
+
+                                          useEffect(() => {
+                                            async function fetchData() {
+                                              // 2. Use a template string to set the URL:
+                                              const res = await fetch(
+                                                `https://www.reddit.com/r/${query}.json`
+                                              );
+
+                                              const json = await res.json();
+                                            }
+
+                                            fetchData();
+
+                                            // 3. Re-run this effect when `subreddit` changes:
+                                          }, [query]);
+
+                                        return (
+                                            <div>
+                                            </div>
+                                          );
+                                        }
+
+                                        <SearchResult query="pasta" />
+
+
+
+Redux o Context API 
+  => Quest altro che cazzo ci uso Redux ?
+  FERMI TUTTI
+  Posso fare tipo cronologia delle ricerche.
+  Aggiungo una pagina tipo "Recenti" 
+  Quando faccio una ricerca e clicco sulla ricetta automaticamente la scarico e la aggiungo alle allo Store di Redux che 
+  conterra' tutte le ricette recenti visualizzate in questa sessione.
+  Redux lo uso perche' lo modifico nelle varie pagine e lo leggo nella pagina della Cronologia
