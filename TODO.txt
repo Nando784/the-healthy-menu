@@ -5,9 +5,12 @@ Barra di ricerca che permetta di cercare tutte le ricette vegetariane.
 
 Ogni ricetta cercata dovrà mostrare almeno titolo e immagine di copertina. 
   => E allora che me ne frega della descrizione. Modifica le card
+  Quando faccio la queri di ricerca delle card, ogni card mi restituisce l'immagine, il titolo e una key.
+  La key non la mostro e la salvo in qualche parte tipo una props.
+  Quando clicco sulla card, faccio una nuova richiesta con la key che avevo salvato prima per ricevere il widget della ricetta.
 
 Cliccare su una ricetta porterà ad una pagina dedicata, dove verranno mostrate ulteriori informazioni. 
-  => Vabe anche questo non dovrebbe essere un problema
+  => Vabe anche questo non dovrebbe essere un problema. Vedi sopra per la costruzione della pagina con la ricetta
 
 Design responsive 
   => E questo, voglio dire, grazie graziella e grazie al cazzo
@@ -19,36 +22,14 @@ Axios
   => Vabe questo Ez
 
 React Hooks 
-  => Come cazzo li posso usare gli state che non comunica una sega in questo sito ?
-  => Metto l'onClick nell'icona della ricerca e quando cerco aggiorno la pagina con lo useEffect chiamandolo dentro l'onClick. 
-
-                                        function myComponent({ query }) {
-
-                                          useEffect(() => {
-                                            async function fetchData() {
-                                              // 2. Use a template string to set the URL:
-                                              const res = await fetch(
-                                                `https://www.reddit.com/r/${query}.json`
-                                              );
-
-                                              const json = await res.json();
-                                            }
-
-                                            fetchData();
-
-                                            // 3. Re-run this effect when `subreddit` changes:
-                                          }, [query]);
-
-                                        return (
-                                            <div>
-                                            </div>
-                                          );
-                                        }
-
-                                        <SearchResult query="pasta" />
+  https://react-bootstrap.github.io/components/buttons/#button-loading-state useState e useEffect
+  Quando faccio la ricerca avanzata tipo per selezionare le diete o le intolleranze
 
 
-
+  https://react-bootstrap.github.io/components/buttons/#checkbox--radio
+  Quando seleziono le intolleranze, uso i button check, nello state mi tengo i bottoni selezionati e quali no, cosi' quando costruisco la query aggiungo tutte quelle che hanno lo state a true.
+  Sostanzilmente un array di oggetti, con un id che puo' essere il nome stesso dell'intolleranza e il valore che sara' true o false.
+  Ogni volta che clicco, modifico lo state e cambio quell'oggetto da true a false e viceversa
 Redux o Context API 
   => Quest altro che cazzo ci uso Redux ?
   FERMI TUTTI

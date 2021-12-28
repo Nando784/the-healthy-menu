@@ -27,13 +27,7 @@ function NavBar() {
                     <p>Home</p>
                   </Link>
                 </Col>
-
-                <Col className={style.linkContainer}>
-                  <Link className={style.link} to="/course">
-                    <p>Course</p>
-                  </Link>
-                </Col>
-
+                
                 <Col className={style.linkContainer}>
                   <Link className={style.link} to="/dietary">
                     <p>Dietary</p>
@@ -49,6 +43,12 @@ function NavBar() {
                 <Col className={style.linkContainer}>
                   <Link className={style.link} to="/country">
                     <p>Country</p>
+                  </Link>
+                </Col>
+
+                <Col className={style.linkContainer}>
+                  <Link className={style.link} to="/history">
+                    <p>History</p>
                   </Link>
                 </Col>
               </Row>

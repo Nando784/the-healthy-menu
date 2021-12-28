@@ -1,0 +1,47 @@
+
+.advanceResearchButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width:150px;
+
+  padding: 0.7rem 2rem;
+  margin: 20px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 700;
+  font-size: 18px;
+
+  text-decoration: none;
+  color: #fff;
+
+  border: 0.3rem solid transparent;
+  border-radius: 3rem;
+  border-color: transparent;
+  
+  background-color: #225D62;
+  transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95); 
+}
+
+.advanceResearchButton:hover{
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+    background-color: #346f74;
+    color: #fff;
+    text-shadow: none;
+}
+
+.buttonContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background-color: rgb(242, 242, 242);
+
+  margin: 20px auto;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}

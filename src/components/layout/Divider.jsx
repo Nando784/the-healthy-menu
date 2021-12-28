@@ -45,6 +45,9 @@ function categorySelector(category){
         <hr style={{ width: "90%", margin: "0" }} />
         </Container>
       )
+    
+    default:
+      return (<></>)
 
   }
 }

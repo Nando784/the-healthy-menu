@@ -1,7 +1,8 @@
 import React from 'react'
 
 import Header from "../components/layout/Header";
-import CardContainer from "../components/layout/CardContainer";
+import Title from "../components/Title";
+import ButtonContainer from "../components/layout/ButtonContainer";
 import Footer from "../components/layout/Footer";
 
 import utilsStyle from '../style/Utils.module.css'
@@ -12,13 +13,10 @@ function Country() {
   return (
     <div className={utilsStyle.background}>
       <Header />
+      <Title title="Country" />
+      <ButtonContainer>{populateCountryes()}</ButtonContainer>
 
-      <CardContainer>
-        {populateCountryes()}
-      </CardContainer>
-
-      <Footer white={true}/>
-
+      <Footer white={true} />
     </div>
   );
 }

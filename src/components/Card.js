@@ -14,9 +14,6 @@ function Card({image, title, description}) {
 
       <div className={style.content}>
         <h2 className={style.title}>{title}</h2>
-        <p className={style.description}>
-          {description}
-        </p>
       </div>
     </div>
   );

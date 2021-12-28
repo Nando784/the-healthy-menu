@@ -4,6 +4,7 @@
   position:absolute;
   top: 40%;
   transform: translateY(-50%);
+  user-select: none;
 }
 
 h1{

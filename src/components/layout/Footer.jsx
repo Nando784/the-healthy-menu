@@ -22,6 +22,7 @@ function Footer({white}) {
             className={style.link}
             href="https://www.linkedin.com/in/nando-sorbello-290399"
             target="_blank"
+            rel="noreferrer"
           >
             <FaLinkedin className={style.socialIcon} />
           </a>
@@ -30,6 +31,7 @@ function Footer({white}) {
             className={style.link}
             href="https://github.com/Nando784"
             target="_blank"
+            rel="noreferrer"
           >
             <FaGithub className={style.socialIcon} />
           </a>
@@ -38,6 +40,7 @@ function Footer({white}) {
             className={style.link}
             href="https://www.instagram.com/sorbrex.ns/"
             target="_blank"
+            rel="noreferrer"
           >
             <FaInstagram className={style.socialIcon} />
           </a>
