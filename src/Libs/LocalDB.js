@@ -179,6 +179,21 @@ let DB = {
       name: "Ovo-Vegetarian",
     },
   ],
+
+  InitialRecipes: [
+    {
+      image: "",
+      title: "",
+    },
+    {
+      image: "",
+      title: "",
+    },
+    {
+      image: "",
+      title: "",
+    },
+  ],
 };
 
 export default DB

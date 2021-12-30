@@ -21,7 +21,7 @@ function categorySelector(category){
       return (
         <Container fluid className={`${style.divider} ${style.top}`}>
           <img className={style.icon} src={Rating} alt="Divider_Icon" />
-          <h3 class={style.title}>
+          <h3 className={style.title}>
             <strong>Highest Score</strong>
           </h3>
           <hr style={{ width: "40%", margin: "0" }} />
@@ -32,7 +32,7 @@ function categorySelector(category){
       return (
         <Container fluid className={`${style.divider} ${style.top}`}>
           <img className={style.icon} src={Community} alt="Divider_Icon" />
-          <h3 class={style.title}>
+          <h3 className={style.title}>
             <strong>Most Popular Recipes</strong>
           </h3>
           <hr style={{ width: "40%", margin: "0" }} />
