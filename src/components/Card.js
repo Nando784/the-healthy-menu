@@ -1,7 +1,7 @@
 import React from 'react'
 import style from '../style/Card.module.css'
 import SampleSalad from '../images/SampleSalad.jpg'
-function Card({image, title, description}) {
+function Card({image, title}) {
   return (
     <div className={style.card}>
       <div className={style.imgBx}>

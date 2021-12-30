@@ -20,18 +20,12 @@ function Home() {
       <CardContainer>
         <Card
           image=""
-          title="Card One"
-          description="Test test test test test test"
+          title="Spicy Black-Eyed Pea Curry with Swiss Chard and Roasted Eggplant"
         />
+        <Card image="" title="Easy Homemade Rice and Beans" />
         <Card
           image=""
-          title="Card Two"
-          description="Test test test test test test"
-        />
-        <Card
-          image=""
-          title="Card Three"
-          description="Test test test test test test"
+          title="Cauliflower, Brown Rice, and Vegetable Fried Rice"
         />
       </CardContainer>
 

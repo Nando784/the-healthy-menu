@@ -9,7 +9,7 @@
   flex-direction: column;
 
   max-width: 300px;
-  height: 350px;
+  min-height: 100%;
 
   margin: 40px 30px;
   padding: 20px 15px;  
@@ -31,17 +31,10 @@
   text-align: center;
   color: #2f2f2f;
   margin-top: 10px;
-  width: 250px;
 }
-
 
 .title{
-  width: 250px;
+  min-width: 100%;
   color: #fff;
-}
-
-.description{
-  width: 250px;
-  font-size: 14px;
-  text-align: center;
+  font-size: 22px;
 }

@@ -3,7 +3,7 @@
   min-height: 500px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   padding: 50px;
 }
