@@ -24,4 +24,17 @@ export let populateIntolerances = () => {
       {intolerance.name}
     </button>
   ));
+  }
+
+
+export let populateDiet = () => {
+  return DB.Diets.map((diet) => (
+    <button
+      key={diet.id}
+      className={style.advanceResearchButton}
+      href={`./searchedForIntolerance=${diet.name}`}
+    >
+      {diet.name}
+    </button>
+  ));
 };

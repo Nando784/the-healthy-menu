@@ -7,14 +7,20 @@ import Footer from "../components/layout/Footer";
 
 import utilsStyle from "../style/Utils.module.css";
 
-import { populateCountryes } from "../Libs/Library";
 
 function History() {
   return (
     <div className={utilsStyle.background}>
       <Header />
       <Title title="History" />
-      <CardContainer>BELLO</CardContainer>
+      <CardContainer history={true}>
+
+      {
+        //TODO:
+        //Qua usa lo store di Redux per popolarlo
+      }
+
+      </CardContainer>
 
       <Footer white={true} />
     </div>

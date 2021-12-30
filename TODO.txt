@@ -30,6 +30,10 @@ React Hooks
   Quando seleziono le intolleranze, uso i button check, nello state mi tengo i bottoni selezionati e quali no, cosi' quando costruisco la query aggiungo tutte quelle che hanno lo state a true.
   Sostanzilmente un array di oggetti, con un id che puo' essere il nome stesso dell'intolleranza e il valore che sara' true o false.
   Ogni volta che clicco, modifico lo state e cambio quell'oggetto da true a false e viceversa
+
+
+
+
 Redux o Context API 
   => Quest altro che cazzo ci uso Redux ?
   FERMI TUTTI
@@ -38,3 +42,4 @@ Redux o Context API
   Quando faccio una ricerca e clicco sulla ricetta automaticamente la scarico e la aggiungo alle allo Store di Redux che 
   conterra' tutte le ricette recenti visualizzate in questa sessione.
   Redux lo uso perche' lo modifico nelle varie pagine e lo leggo nella pagina della Cronologia
+  Nella pagina della cronologia, fai un qualche style per il messaggio di errore che cosi' fa schifo e ribrezzo

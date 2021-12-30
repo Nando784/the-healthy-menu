@@ -2,12 +2,12 @@ import React from 'react'
 
 import Header from "../components/layout/Header";
 import Title from "../components/Title";
-import CardContainer from "../components/layout/CardContainer";
+import ButtonContainer from "../components/layout/ButtonContainer";
 import Footer from "../components/layout/Footer";
 
 import utilsStyle from "../style/Utils.module.css";
 
-import { populateCountryes } from "../Libs/Library";
+import { populateDiet } from "../Libs/Library";
 
 
 function Dietary() {
@@ -15,7 +15,7 @@ function Dietary() {
     <div className={utilsStyle.background}>
       <Header />
       <Title title="Dietary" />
-      <CardContainer>{populateCountryes()}</CardContainer>
+      <ButtonContainer>{populateDiet()}</ButtonContainer>
 
       <Footer white={true} />
     </div>

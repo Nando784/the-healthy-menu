@@ -7,6 +7,7 @@ function Card({image, title, description}) {
       <div className={style.imgBx}>
         <img className={style.cardImg} src={SampleSalad} alt="Food" />
         {
+        //TODO:
         //Sostituire l'immagine SRC con la props 'image'
         //Cambiare il design. Non serve la descrizione. Serve solo il titolo e l'immagine. Fai la card un po' piu' piccola e alza l'immagine.
         }

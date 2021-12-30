@@ -156,6 +156,29 @@ let DB = {
       name: "Wheat",
     },
   ],
+
+  Diets: [
+    {
+      id: 1,
+      name: "Vegetarian",
+    },
+    {
+      id: 2,
+      name: "Vegan",
+    },
+    {
+      id: 3,
+      name: "Pescetarian",
+    },
+    {
+      id: 4,
+      name: "Lacto-Vegetarian",
+    },
+    {
+      id: 5,
+      name: "Ovo-Vegetarian",
+    },
+  ],
 };
 
 export default DB
