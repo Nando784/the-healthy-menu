@@ -8,6 +8,7 @@ import Dietary from "./pages/Dietary";
 import Intolerance from "./pages/Intolerance";
 import Country from "./pages/Country";
 import History from "./pages/History";
+import Recipe from "./pages/Recipe";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route exact path="/intolerance" element={<Intolerance />} />
         <Route exact path="/country" element={<Country />} />
         <Route exact path="/history" element={<History />} />
+        <Route exact path="/recipe/:name/:id" element={<Recipe />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

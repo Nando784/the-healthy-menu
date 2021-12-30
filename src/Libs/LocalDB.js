@@ -182,14 +182,17 @@ let DB = {
 
   InitialRecipes: [
     {
+      id: "",
       image: "",
       title: "",
     },
     {
+      id: "",
       image: "",
       title: "",
     },
     {
+      id: "",
       image: "",
       title: "",
     },
