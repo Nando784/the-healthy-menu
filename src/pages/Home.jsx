@@ -1,13 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 import axios from 'axios';
 import _ from 'lodash';
 
 import DB from '../Libs/LocalDB'
 
-import style from '../style/Utils.module.css'
 
 import Header from "../components/layout/Header";
 import BackgroundCarousel from "../components/layout/BackgroundCarousel";
@@ -40,25 +38,25 @@ function Home() {
 
       <Divider category="rating" />
       <CardContainer>
-        <Link
-          className={style.link}
-          to={`/recipe/${RecipesByRating[0].title}/${RecipesByRating[0].id}`}
-        >
+        
           <Card
+            id={RecipesByRating[0].id}
             image={`${RecipesByRating[0].image}`}
             title={RecipesByRating[0].title}
           />
-        </Link>
 
         <Card
+          id={RecipesByRating[1].id}
           image={`${RecipesByRating[1].image}`}
           title={RecipesByRating[1].title}
         />
 
         <Card
+          id={RecipesByRating[2].id}
           image={`${RecipesByRating[2].image}`}
           title={RecipesByRating[2].title}
         />
+
       </CardContainer>
 
       <Divider category="end" />
@@ -90,7 +88,7 @@ function Home() {
 
 async function loadRecipesByRating(setRecipesByRating) {
   let response = await axios.get(
-    `${baseUrl}/recipes/complexSearch?sort=meta-score&number=3${apiKey}`
+    `${baseUrl}/recipes/complexSearch?diet=vegetarian&sort=meta-score&number=3${apiKey}`
   );
   const arrOfRatings = _.get(response, "data.results");
   setRecipesByRating(arrOfRatings);
@@ -99,7 +97,7 @@ async function loadRecipesByRating(setRecipesByRating) {
 
 async function loadRecipesByCommunity(setRecipesByCommunity) {
   let response = await axios.get(
-    `${baseUrl}/recipes/complexSearch?sort=popularity&number=3${apiKey}`
+    `${baseUrl}/recipes/complexSearch?diet=vegetarian&sort=popularity&number=3${apiKey}`
   );
   let arrOfCommunity = _.get(response, "data.results");
   setRecipesByCommunity(arrOfCommunity);
