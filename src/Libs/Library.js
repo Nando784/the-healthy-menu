@@ -38,3 +38,14 @@ export let populateDiet = () => {
     </button>
   ));
 };
+
+
+export let populateHistory = (history) => {
+  console.log("Almeno qua dentro ci siamo arrivati");
+ //TODO:FAI STA COSA COME SI DEVE
+  if (history.length > 0) {
+    return <p>BELLONE</p>;
+  } else {
+    return;
+  }
+}
