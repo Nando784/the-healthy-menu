@@ -6,7 +6,6 @@ import _ from 'lodash';
 
 import DB from '../Libs/LocalDB'
 
-
 import Header from "../components/layout/Header";
 import BackgroundCarousel from "../components/layout/BackgroundCarousel";
 import BannerContainer from "../components/layout/BannerContainer";
@@ -20,7 +19,7 @@ let apiKey = `&apiKey=${process.env.REACT_APP_API_KEY}`;
 
 
 function Home() {
-
+  
   const [RecipesByRating, setRecipesByRating] = useState(DB.InitialRecipes);
   const [RecipesByCommunity, setRecipesByCommunity] = useState(DB.InitialRecipes);
   useEffect(() => {
