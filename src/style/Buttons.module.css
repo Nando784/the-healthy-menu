@@ -38,10 +38,10 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 700px;
-  background-color: rgb(242, 242, 242);
   min-height: 400px;
   margin: 20px auto;
 
+  background-color: rgb(242, 242, 242);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }

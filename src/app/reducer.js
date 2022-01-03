@@ -4,21 +4,17 @@ const counterReducer = (state, action) => {
 
     case "ADD_RECIPE":
 
-      console.log(action.payload);
-
-      let obj = {
+      let stateObj = {
         ...state,
-        history: [...state.history,action.payload]
+        history: [...state.history]
       }
 
-      let oldHistory = obj.history
-//TODO CONTINUA A SISTEMARE DOMANI CHE SONO FINITE LE RICHIESTE BUTTANA LA MISERIA
-      console.log("Minchia funziona => " + obj.history[0].id);
-
-      return{
+      let oldHistory = stateObj.history.filter((item) => item.id != action.payload.id)
+      
+      return {
         ...state,
-        history: [...state.history,action.payload]
-      }
+        history: oldHistory.concat([action.payload]).reverse(), //TODO IL REVERSE FUNZIONA A CAZZO, CAPISCI PERCHE'
+      };
 
     case "REMOVE_RECIPE":
       return state.pop;
