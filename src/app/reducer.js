@@ -17,7 +17,28 @@ const counterReducer = (state, action) => {
       };
 
     case "REMOVE_RECIPE":
-      return state.pop;
+
+        let stateObj = {
+          ...state,
+          history: [...state.history],
+        };
+
+        let oldHistory = stateObj.history.filter(
+          (item) => item.id != action.payload.id
+        );
+
+        return {
+          ...state,
+          history: oldHistory
+        };
+
+
+    case "REMOVE_ALL_RECIPES":
+      
+        return {
+          ...state,
+          history: [],
+        };
 
     default:
       return state;
