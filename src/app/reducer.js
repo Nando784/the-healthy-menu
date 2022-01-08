@@ -1,15 +1,17 @@
 //Reducer describe how the store change. It is the function that contain the real logic.
 const counterReducer = (state, action) => {
+  
+  let oldHistory;
+  let stateObj = {
+    ...state,
+    history: [...state.history],
+  };
+
   switch (action.type) {
 
     case "ADD_RECIPE":
 
-      let stateObj = {
-        ...state,
-        history: [...state.history]
-      }
-
-      let oldHistory = stateObj.history.filter((item) => item.id != action.payload.id)
+      oldHistory = stateObj.history.filter((item) => item.id != action.payload.id)
       
       return {
         ...state,
@@ -18,12 +20,8 @@ const counterReducer = (state, action) => {
 
     case "REMOVE_RECIPE":
 
-        let stateObj = {
-          ...state,
-          history: [...state.history],
-        };
 
-        let oldHistory = stateObj.history.filter(
+        oldHistory = stateObj.history.filter(
           (item) => item.id != action.payload.id
         );
 
