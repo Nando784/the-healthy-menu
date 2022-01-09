@@ -11,7 +11,7 @@ const counterReducer = (state, action) => {
 
     case "ADD_RECIPE":
 
-      oldHistory = stateObj.history.filter((item) => item.id != action.payload.id)
+      oldHistory = stateObj.history.filter((item) => item.id !== action.payload.id)
       
       return {
         ...state,
@@ -22,7 +22,7 @@ const counterReducer = (state, action) => {
 
 
         oldHistory = stateObj.history.filter(
-          (item) => item.id != action.payload.id
+          (item) => item.id !== action.payload.id
         );
 
         return {
