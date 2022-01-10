@@ -42,7 +42,7 @@ function Home() {
           `${baseUrl}/recipes/complexSearch?diet=vegetarian&sort=popularity&number=3${apiKey}`,{signal:controller.signal}
         );
 
-        let arrOfCommunity = _.get(response, "data.results");
+        const arrOfCommunity = _.get(response, "data.results");
         setRecipesByCommunity(arrOfCommunity);
 
         controller = null
@@ -91,16 +91,19 @@ function Home() {
       <Divider category="community" />
       <CardContainer>
         <Card
+          id={RecipesByCommunity[0].id}
           image={` ${RecipesByCommunity[0].image}`}
           title={RecipesByCommunity[0].title}
         />
 
         <Card
+          id={RecipesByCommunity[1].id}
           image={` ${RecipesByCommunity[1].image}`}
           title={RecipesByCommunity[1].title}
         />
 
         <Card
+          id={RecipesByCommunity[2].id}
           image={` ${RecipesByCommunity[2].image}`}
           title={RecipesByCommunity[2].title}
         />
