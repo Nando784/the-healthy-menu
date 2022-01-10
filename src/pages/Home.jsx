@@ -28,7 +28,7 @@ function Home() {
     let controller = new AbortController();
     let response;
 
-    const fetcher = async () => {
+    const recipesLoader = async () => {
       try {
 
         response = await axios.get(
@@ -52,7 +52,7 @@ function Home() {
       }
     };
     
-    fetcher()
+    recipesLoader()
 
     return () => controller?.abort()
 
