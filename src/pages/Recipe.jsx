@@ -29,17 +29,12 @@ function Recipe() {
 
     const getRecipeCard = async () => {
       try {
-
-        console.log(`${baseUrl}/recipes/${params.id}/card${apiKey}`)
-
         response = await axios.get(
           `${baseUrl}/recipes/${params.id}/card${apiKey}`,{signal:controller.signal}
         );
 
-        console.log(response)
         setRecipeImageUrl(_.get(response, "data.url"))
-        console.log(recipeImageUrl)
-
+        
         controller = null
   
       } catch {

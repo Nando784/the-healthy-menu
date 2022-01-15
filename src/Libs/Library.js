@@ -1,7 +1,12 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addFilter, removeFilter } from "../app/action";
+
 import Card from "../components/Card"
 import style from "../style/Buttons.module.css";
 import DB from './LocalDB'
+
+
 
 export let populateCountryes = () => {
   return DB.Countryes.map((country) => (
@@ -25,14 +30,15 @@ export let populateIntolerances = () => {
       {intolerance.name}
     </button>
   ));
-  }
+}
 
-
-export let populateDiet = () => {
+export let populateDiet = (filters) => {
   return DB.Diets.map((diet) => (
     <button
       key={diet.id}
-      className={style.advanceResearchButton}
+      className={` ${style.advanceResearchButton} ${
+        filters.includes(diet.name) ? style.advanceResearchButtonChecked : ""
+      } `}
       href={`./searchedForIntolerance=${diet.name}`}
     >
       {diet.name}

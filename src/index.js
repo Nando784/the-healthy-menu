@@ -6,19 +6,18 @@ import App from './App'
 
 import { createStore } from "redux"
 import { Provider } from 'react-redux'
-import counterReducer from './app/reducer'
+import rootReducer from './app/reducers'
 
-const history = createStore(
-  counterReducer,
-  { history: [] },
+const store = createStore(
+  rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-history.subscribe(() => console.log(history.getState()))
+store.subscribe(() => console.log(store.getState()));
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={history}>
+    <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>,

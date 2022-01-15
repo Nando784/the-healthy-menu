@@ -10,7 +10,7 @@ import utilsStyle from "../style/Utils.module.css";
 import { populateHistory } from "../Libs/Library"
 
 function History() {
-  const history = useSelector((state)=> state.history)
+  const history = useSelector((store)=> store.historyReducer.history)
 
   return (
     <div className={utilsStyle.background}>
