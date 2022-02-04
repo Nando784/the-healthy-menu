@@ -7,6 +7,7 @@ import Intolerance from "./pages/Intolerance";
 import Country from "./pages/Country";
 import History from "./pages/History";
 import Recipe from "./pages/Recipe";
+import Searched from "./pages/Searched"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/country" element={<Country />} />
           <Route exact path="/history" element={<History />} />
           <Route exact path="/recipe/:name/:id" element={<Recipe />} />
+          <Route exact path="/searched/:filter/:query" element={<Searched />} />
         </Routes>
       </BrowserRouter>
     </>
