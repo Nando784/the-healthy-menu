@@ -24,3 +24,13 @@ React Hooks
 
 Redux o Context API 
   => Implementato con la History ma non mantiene l'ordine, controlla
+
+
+
+
+  NELLE PUNTATE PRECENDENTI: 
+    Abbiamo scelto che la selezione di diete e intolleranze non è multipla. Quando clicchi su una, ti va nella pagina della ricerca e ti fa vedere le
+    ricette senza query ma solo con quel filtro. Faccio il check per -1 e lo sostituisco con una scringa vuota nella richiesta api.
+    La barra di ricerca mi permetterà di fare solo ricerche per ricette vegetariane.
+    Al massimo sistemiamo la pagina delle ricette che fa ribrezzo.
+    Sbrighiamoci che mi sono anche rotto le palle.

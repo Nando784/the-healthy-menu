@@ -7,7 +7,7 @@ import CardContainer from "../components/layout/CardContainer";
 import Footer from "../components/layout/Footer";
 
 import utilsStyle from "../style/Utils.module.css";
-import { populateHistory } from "../Libs/Library"
+import { populateSearched } from "../Libs/Library"
 
 function  Searched() {
   //const history = useSelector((state)=> state.history) state.filter ?
