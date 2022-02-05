@@ -20,7 +20,7 @@ function  Searched() {
       <CardContainer>
 
       {
-        populateHistory(history)
+       // populateHistory(history)
       }
 
       </CardContainer>
