@@ -1,21 +1,18 @@
 
 Barra di ricerca che permetta di cercare tutte le ricette vegetariane. 
-  => Voglio dire, la base. 
+  => Ci iniziamo a lavorare ? Non lo so, non c'ho voglia di fare un cazzo. Che palle. Vabe.
+  Una cosa che si puo' fare e' creare un array nello store che contiene i filtri.
+  Se l'array di filtri e' vuoto, allora cerco automaticamente quelle vegetariane, senno' aggiungo gli altri filtri.
+  Lo mantengo in tutte le pagine ? Non lo so. Lo store e' solo se voglio mantenere i filtri su tutte le pagine.
+  Forse e' meglio mantenerlo solo sulla singola pagina del filtro ?
+  Vabe facciamo una cosa. Cominciamo creando la pagina che conterra' i risultati della ricerca.
+  La costruzione sara' uguale all'History, anche lo style penso che vada bene quello.
 
 Ogni ricetta cercata dovrà mostrare almeno titolo e immagine di copertina. 
-  => E allora che me ne frega della descrizione. Modifica le card
-  Quando faccio la query di ricerca delle card, ogni card mi restituisce l'immagine, il titolo e una key.
-  La key non la mostro e la salvo in qualche parte tipo una props.
-  Quando clicco sulla card, faccio una nuova richiesta con la key che avevo salvato prima per ricevere il widget della ricetta.
+  => Fatto.
 
 Cliccare su una ricetta porterà ad una pagina dedicata, dove verranno mostrate ulteriori informazioni. 
-  => Vabe anche questo non dovrebbe essere un problema. Vedi sopra per la costruzione della pagina con la ricetta
-  => Allora, qua studiamola un po', perche' o creo una Route o lo faccio diventare un vero e proprio link.
-  => Definisco la Route insieme a tutte le altre in index.js e siamo a cavallo.
-  => Poi quando creo le card le azzicco dentro un link.
-  => Il link poi o non lo facciamo con Exact Routes cosi' scriviamo l'id nella barra, oppure passiamo l'id della ricetta come props
-  
-
+  => Fatto. Lo vogliamo fare meglio ? Non credo, ma per adesso non lo cancello.  
 
 React Hooks  
   => Gia' implementato e a sto punto penso che lo implementero' anche abbastanza altre volte
@@ -26,10 +23,4 @@ React Hooks
 
 
 Redux o Context API 
-  => Quest altro che cazzo ci uso Redux ?
-  FERMI TUTTI
-  Posso fare tipo cronologia delle ricerche.
-  Aggiungo una pagina tipo "Recenti" 
-  Quando faccio una ricerca e clicco sulla ricetta automaticamente la scarico e la aggiungo alle allo Store di Redux che 
-  conterra' tutte le ricette recenti visualizzate in questa sessione.
-  Redux lo uso perche' lo modifico nelle varie pagine e lo leggo nella pagina della Cronologia
+  => Implementato con la History ma non mantiene l'ordine, controlla
