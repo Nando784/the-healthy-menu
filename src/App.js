@@ -20,7 +20,7 @@ function App() {
           <Route exact path="/country" element={<Country />} />
           <Route exact path="/history" element={<History />} />
           <Route exact path="/recipe/:name/:id" element={<Recipe />} />
-          <Route exact path="/searched/:filter/:query" element={<Searched />} />
+          <Route exact path="/searched/:filterType/:filterName/:query" element={<Searched />} />
         </Routes>
       </BrowserRouter>
     </>

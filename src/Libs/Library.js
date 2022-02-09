@@ -11,7 +11,7 @@ export let populateCountryes = () => {
     <Link
       key={country.id}
       className={style.advanceResearchButton}
-      to={`/searched/cuisine=${country.name}/-1`}
+      to={`/searched/cuisine/${country.name.replace(" ","")}/*`}
     >
       <p>{country.name}</p>
     </Link>
@@ -23,25 +23,22 @@ export let populateIntolerances = () => {
     <Link
       key={intolerance.id}
       className={style.advanceResearchButton}
-      to={`/searched/intolerances=${country.name}/-1`}
+      to={`/searched/intolerances/${intolerance.name.replace(" ", "")}/*`}
     >
       <p>{intolerance.name}</p>
     </Link>
   ));
 };
 
-export let populateDiet = (filters) => {
+export let populateDiet = () => {
   return DB.Diets.map((diet) => (
-    <button
+    <Link
       key={diet.id}
-      className={` ${style.advanceResearchButton} ${
-        filters.includes(diet.name) ? style.advanceResearchButtonChecked : ""
-      } `}
-      href={`./searchedForIntolerance=${diet.name}`}
-      //OnClick Go to the page with Recipes With Only That Diet. Im tired. I dont wanna do the old version. Just want to finish this.
+      className={style.advanceResearchButton}
+      to={`/searched/diet/${diet.name.replace(" ", "")}/*`}
     >
       {diet.name}
-    </button>
+    </Link>
   ));
 };
 

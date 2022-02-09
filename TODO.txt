@@ -31,6 +31,11 @@ Redux o Context API
   NELLE PUNTATE PRECENDENTI: 
     Abbiamo scelto che la selezione di diete e intolleranze non è multipla. Quando clicchi su una, ti va nella pagina della ricerca e ti fa vedere le
     ricette senza query ma solo con quel filtro. Faccio il check per -1 e lo sostituisco con una scringa vuota nella richiesta api.
-    La barra di ricerca mi permetterà di fare solo ricerche per ricette vegetariane.
+    La composizione del link è /searched/:filterType/:filterName/:query
+
+    Finito ^^^ Adesso bisogna eliminare i vari reducer in più cercando di non fare danno
+
+    La barra di ricerca mi permetterà di fare solo ricerche per ricette vegetariane. e sarà di default /searched/diet/vegetarian/:query
+
     Al massimo sistemiamo la pagina delle ricette che fa ribrezzo.
     Sbrighiamoci che mi sono anche rotto le palle.

@@ -13,8 +13,6 @@ import { addDietary, removeDietary } from '../app/action'
 
 function Dietary() {
 
-
-
   const dietary = useSelector((state)=> state.dietaryReducer.dietary)
   console.log(dietary)
 

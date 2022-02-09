@@ -2,11 +2,11 @@ import React from 'react'
 import style from '../../style/CardContainer.module.css'
 import utilsStyle from '../../style/Utils.module.css'
 
-function CardContainer(props,history){
+function CardContainer(props){
   return (
     <div className={style.cardContainer}>
       {
-        props.children ? props.children : errorFor(history)
+        props.children ? props.children : errorFor(props.history)
       }
     </div>
   );
