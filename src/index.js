@@ -6,14 +6,14 @@ import App from './App'
 
 import { createStore } from "redux"
 import { Provider } from 'react-redux'
-import rootReducer from './app/reducers'
+import historyReducer from './app/reducers'
 
 const store = createStore(
-  rootReducer,
+  historyReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-store.subscribe(() => console.log(store.getState()));
+// store.subscribe(() => console.log(store.getState()));
 
 ReactDOM.render(
   <React.StrictMode>

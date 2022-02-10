@@ -1,12 +1,40 @@
-import { combineReducers } from "redux";
-import dietaryReducer from './dietaryReducer'
-import historyReducer from './historyReducer'
-import intoleranceReducer from './intoleranceReducer'
+const historyReducer = (state = { history: [] }, action) => {
+  let oldHistory;
+  let stateObj = {
+    ...state,
+    history: [...state.history],
+  };
 
-const rootReducer = combineReducers({
-  historyReducer,
-  dietaryReducer,
-  intoleranceReducer
-})
+  switch (action.type) {
+    case "ADD_RECIPE":
+      oldHistory = stateObj.history.filter(
+        (item) => item.id !== action.payload.id
+      );
 
-export default rootReducer
+      return {
+        ...state,
+        history: oldHistory.concat([action.payload]).reverse(), //TODO IL REVERSE FUNZIONA A CAZZO, CAPISCI PERCHE'
+      };
+
+    case "REMOVE_RECIPE":
+      oldHistory = stateObj.history.filter(
+        (item) => item.id !== action.payload.id
+      );
+
+      return {
+        ...state,
+        history: oldHistory,
+      };
+
+    case "REMOVE_ALL_RECIPES":
+      return {
+        ...state,
+        history: [],
+      };
+
+    default:
+      return state;
+  }
+};
+
+export default historyReducer;

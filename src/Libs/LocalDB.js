@@ -172,11 +172,11 @@ let DB = {
     },
     {
       id: 4,
-      name: "Lacto - Vegetarian",
+      name: "Lacto-Vegetarian",
     },
     {
       id: 5,
-      name: "Ovo - Vegetarian",
+      name: "Ovo-Vegetarian",
     },
   ],
 

@@ -26,13 +26,18 @@ function  Searched() {
       
     let controller = new AbortController();
     let response;
+    let completeUrl = "" 
 
     const responseLoader = async () => {
       try {
 
-        response = await axios.get(
-          `${baseUrl}/recipes/complexSearch?${params.filterType}=${params.filterName}&sort=meta-score&number=30${apiKey}`,{signal:controller.signal}
-        );
+        params.filterType == 'diet' ?
+          completeUrl = `${baseUrl}/recipes/complexSearch?${params.filterType}=${params.filterName}&sort=meta-score&number=30${apiKey}` 
+            :
+          completeUrl = `${baseUrl}/recipes/complexSearch?${params.filterType}=${params.filterName}&diet=vegetarian&sort=meta-score&number=30${apiKey}`
+        
+        
+        response = await axios.get(completeUrl, {signal:controller.signal});
 
         let finalArray = []
         const arrOfRecipes = _.get(response, "data.results");
