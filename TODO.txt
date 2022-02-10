@@ -1,41 +1,24 @@
-
-Barra di ricerca che permetta di cercare tutte le ricette vegetariane. 
-  => Ci iniziamo a lavorare ? Non lo so, non c'ho voglia di fare un cazzo. Che palle. Vabe.
-  Una cosa che si puo' fare e' creare un array nello store che contiene i filtri.
-  Se l'array di filtri e' vuoto, allora cerco automaticamente quelle vegetariane, senno' aggiungo gli altri filtri.
-  Lo mantengo in tutte le pagine ? Non lo so. Lo store e' solo se voglio mantenere i filtri su tutte le pagine.
-  Forse e' meglio mantenerlo solo sulla singola pagina del filtro ?
-  Vabe facciamo una cosa. Cominciamo creando la pagina che conterra' i risultati della ricerca.
-  La costruzione sara' uguale all'History, anche lo style penso che vada bene quello.
-
 Ogni ricetta cercata dovrà mostrare almeno titolo e immagine di copertina. 
   => Fatto.
 
-Cliccare su una ricetta porterà ad una pagina dedicata, dove verranno mostrate ulteriori informazioni. 
-  => Fatto. Lo vogliamo fare meglio ? Non credo, ma per adesso non lo cancello.  
-
 React Hooks  
-  => Gia' implementato e a sto punto penso che lo implementero' anche abbastanza altre volte
-  https://react-bootstrap.github.io/components/buttons/#checkbox--radio
-  Quando seleziono le intolleranze, uso i button check, nello state mi tengo i bottoni selezionati e quali no, cosi' quando costruisco la query aggiungo tutte quelle che hanno lo state a true.
-  Sostanzilmente un array di oggetti, con un id che puo' essere il nome stesso dell'intolleranza e il valore che sara' true o false.
-  Ogni volta che clicco, modifico lo state e cambio quell'oggetto da true a false e viceversa
-
+  => Fatto.
 
 Redux o Context API 
   => Implementato con la History ma non mantiene l'ordine, controlla
 
 
+Cliccare su una ricetta porterà ad una pagina dedicata, dove verranno mostrate ulteriori informazioni. 
+  => Fatto. Lo vogliamo fare meglio ? Non credo, ma per adesso non lo cancello.  
+    Al massimo sistemiamo la pagina delle ricette che fa ribrezzo.
+    Sbrighiamoci che mi sono anche rotto le palle.
+
 
 
   NELLE PUNTATE PRECENDENTI: 
-    Abbiamo scelto che la selezione di diete e intolleranze non è multipla. Quando clicchi su una, ti va nella pagina della ricerca e ti fa vedere le
-    ricette senza query ma solo con quel filtro. Faccio il check per -1 e lo sostituisco con una scringa vuota nella richiesta api.
-    La composizione del link è /searched/:filterType/:filterName/:query
 
-    Finito ^^^ Adesso bisogna eliminare i vari reducer in più cercando di non fare danno
+Barra di ricerca che permetta di cercare tutte le ricette vegetariane. 
+  => Okay facciamo sta barra di ricerca.
 
     La barra di ricerca mi permetterà di fare solo ricerche per ricette vegetariane. e sarà di default /searched/diet/vegetarian/:query
 
-    Al massimo sistemiamo la pagina delle ricette che fa ribrezzo.
-    Sbrighiamoci che mi sono anche rotto le palle.

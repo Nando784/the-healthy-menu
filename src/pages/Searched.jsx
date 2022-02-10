@@ -23,42 +23,52 @@ function  Searched() {
   const [list, setList] = useState([<p className={utilsStyle.error} >Caricamento ....</p>]);
 
   useEffect(() => {
-      
+
     let controller = new AbortController();
     let response;
     let completeUrl = "" 
 
     const responseLoader = async () => {
       try {
+        if(params.query === "*"){
 
-        params.filterType == 'diet' ?
+          params.filterType === 'diet' ?
           completeUrl = `${baseUrl}/recipes/complexSearch?${params.filterType}=${params.filterName}&sort=meta-score&number=30${apiKey}` 
             :
           completeUrl = `${baseUrl}/recipes/complexSearch?${params.filterType}=${params.filterName}&diet=vegetarian&sort=meta-score&number=30${apiKey}`
         
+        }else{
+          completeUrl = `${baseUrl}/recipes/complexSearch?${params.filterType}=${params.filterName}&query=${params.query}&sort=meta-score&number=30${apiKey}`
+        }
         
-        response = await axios.get(completeUrl, {signal:controller.signal});
-
+        // console.log(completeUrl)
+        
+        response = await axios.get(completeUrl, {signal:controller.signal})
+          .catch((error) => { console.log("Error in Axios Request =>", error) })
+        
         let finalArray = []
         const arrOfRecipes = _.get(response, "data.results");
-
+        
+        let key = 0
         for(let element of arrOfRecipes) {
           finalArray.push(
             <Card
-              key={`${element.id}`}
+              key={`${key}`}
               id={`${element.id}`}
               image={`${element.image}`}
               title={element.title}
             />
           )
+          
+          key++
         }
         
         setList(finalArray);
 
         controller = null
   
-      } catch {
-        console.log("Error in Axios Request")
+      } catch (err) {
+        console.log("Error While Recipes Loading =>", err)
       }
     };
     
