@@ -1,17 +1,20 @@
 import React from "react";
-import style from "../style/SearchBar.module.css";
+import { useNavigate } from "react-router-dom";
+
 import { FaSearch } from "react-icons/fa";
+
+import style from "../style/SearchBar.module.css";
 import Container from "react-bootstrap/Container";
 
 function SearchBar() {
 
+  let navigate = useNavigate();
 
   const handleKeyDown = (event) => {
-    if (event.keyCode !== 13) {
-
-    } else {
-      
-      
+    if (event.keyCode === 13) {
+      let query = event.target.value ? event.target.value : '*'  
+      navigate(`/searched/diet/vegetarian/${query}`);
+      window.location.reload();
     }
   };
 

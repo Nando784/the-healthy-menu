@@ -20,7 +20,7 @@ let apiKey = `&apiKey=${process.env.REACT_APP_API_KEY}`;
 function  Searched() {
 
   let params = useParams();
-  const [list, setList] = useState([<p className={utilsStyle.error} >Caricamento ....</p>]);
+  const [list, setList] = useState([<p key={-1} className={utilsStyle.error} >Caricamento ....</p>]);
 
   useEffect(() => {
 

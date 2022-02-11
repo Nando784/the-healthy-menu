@@ -4,6 +4,9 @@ Ogni ricetta cercata dovrà mostrare almeno titolo e immagine di copertina.
 React Hooks  
   => Fatto.
 
+Barra di ricerca che permetta di cercare tutte le ricette vegetariane. 
+  => Fatto
+
 Redux o Context API 
   => Implementato con la History ma non mantiene l'ordine, controlla
 
@@ -16,9 +19,4 @@ Cliccare su una ricetta porterà ad una pagina dedicata, dove verranno mostrate 
 
 
   NELLE PUNTATE PRECENDENTI: 
-
-Barra di ricerca che permetta di cercare tutte le ricette vegetariane. 
-  => Okay facciamo sta barra di ricerca.
-
-    La barra di ricerca mi permetterà di fare solo ricerche per ricette vegetariane. e sarà di default /searched/diet/vegetarian/:query
 
