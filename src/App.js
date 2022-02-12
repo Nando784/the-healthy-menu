@@ -15,12 +15,17 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/staging" element={<Recipe />} />
           <Route exact path="/dietary" element={<Dietary />} />
           <Route exact path="/intolerance" element={<Intolerance />} />
           <Route exact path="/country" element={<Country />} />
           <Route exact path="/history" element={<History />} />
           <Route exact path="/recipe/:name/:id" element={<Recipe />} />
-          <Route exact path="/searched/:filterType/:filterName/:query" element={<Searched />} />
+          <Route
+            exact
+            path="/searched/:filterType/:filterName/:query"
+            element={<Searched />}
+          />
         </Routes>
       </BrowserRouter>
     </>
