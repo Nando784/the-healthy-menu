@@ -13,7 +13,7 @@ const historyReducer = (state = { history: [] }, action) => {
 
       return {
         ...state,
-        history: oldHistory.concat([action.payload]).reverse(), //TODO IL REVERSE FUNZIONA A CAZZO, CAPISCI PERCHE'
+        history: oldHistory.concat([action.payload]).reverse(),
       };
 
     case "REMOVE_RECIPE":
