@@ -21,19 +21,22 @@ function Recipe() {
   let params = useParams();
 
   const [recipeImageUrl, setRecipeImageUrl] = useState("");
+  const [originalRecipeUrl, setOriginalRecipeUrl] = useState("");
+  const [isVisible, setVisibility] = useState("hidden");
 
+  
   useEffect(() => {
-      
     let controller = new AbortController();
-    let response;
+    let imageResponse;
+    let originalLinkResponse;
 
     const getRecipeCard = async () => {
       try {
-        response = await axios.get(
+        imageResponse = await axios.get(
           `${baseUrl}/recipes/${params.id}/card${apiKey}`,{signal:controller.signal}
         );
 
-        setRecipeImageUrl(_.get(response, "data.url"))
+        setRecipeImageUrl(_.get(imageResponse, "data.url"))
         
         controller = null
   
@@ -41,8 +44,25 @@ function Recipe() {
         console.log("Error in Axios Request")
       }
     };
+
+    const getOriginalRecipeUrl = async () => {
+      try {
+        originalLinkResponse = await axios.get(
+          `${baseUrl}/recipes/${params.id}/information${apiKey}`,{signal:controller.signal}
+        );
+
+        setOriginalRecipeUrl(_.get(originalLinkResponse, "data.sourceUrl"))
+        setVisibility("visible")
+        controller = null
+  
+      } catch {
+        console.log("Error in Axios Request")
+      }
+    };
+    
     
     getRecipeCard()
+    getOriginalRecipeUrl()
 
     return () => controller?.abort()
 
@@ -58,8 +78,11 @@ function Recipe() {
       <div className={style.recipeImageContainer} >
         <img className={style.recipeImage} src={recipeImageUrl} alt="Recipe" />
       </div>
-      
 
+      <div className={style.linkContainer}>
+        <a href={originalRecipeUrl} target="_blank" rel="noreferrer" style={{visibility: isVisible}} className={style.link}> Original Recipe ... </a>
+      </div>
+      
       <Footer white={true} />
     </div>
   );

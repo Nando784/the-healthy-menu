@@ -14,3 +14,42 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
+
+
+.linkContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.linkContainer > a:hover {
+   color: #fff !important;
+}
+
+
+
+.link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.7rem 2rem;
+  margin: 20px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 700;
+  font-size: 18px;
+
+  text-decoration: none;
+  color: #fff;
+
+  border: 0.3rem solid transparent;
+  border-radius: 3rem;
+  border-color: transparent;
+  
+  background-color: #225D62;
+  transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95); 
+}
