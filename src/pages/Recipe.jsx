@@ -77,8 +77,8 @@ function Recipe() {
 
       <Title title={params.name} />
 
-      <
-      <p className={utilsStyle.error} style={{visibility: isCharging}} > Caricamento .... </p>
+      
+      <p className={utilsStyle.error} style={{visibility: isCharging}} > Loading .... </p>
 
       <div className={style.recipeImageContainer} >
         <img className={style.recipeImage} style={{visibility: isVisible}} src={recipeImageUrl} alt="Recipe" />
