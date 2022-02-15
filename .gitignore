@@ -10,9 +10,11 @@
 
 # production
 /build
-/.idea
+
 
 # misc
+/.github/workflows
+/.idea
 .DS_Store
 .env.local
 .env.development.local
