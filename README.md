@@ -1,7 +1,8 @@
 # The Healthy Menu
 
 This Project aims to create a React Application to search for Vegan Recipes
-[Web Site of Firebase](https://the-healthy-menu.web.app/)
+
+[Web Site Hosted on Firebase](https://the-healthy-menu.web.app/)
 ## Run The Application
 
 In the project directory, you can run:
