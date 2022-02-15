@@ -15,9 +15,6 @@ function Intolerance() {
       <Header />
       <Title title="Intolerance" />
       <ButtonContainer>{populateIntolerances()}</ButtonContainer>
-
-      {/** Aggiungere il "Search" Button con lo state per attendere il caricamento */}
-
       <Footer white={true} />
     </div>
   );

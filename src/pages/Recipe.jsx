@@ -23,8 +23,8 @@ function Recipe() {
   const [recipeImageUrl, setRecipeImageUrl] = useState("");
   const [originalRecipeUrl, setOriginalRecipeUrl] = useState("");
   const [isVisible, setVisibility] = useState("hidden");
+  const [isCharging, setCharging] = useState("visible");
 
-  
   useEffect(() => {
     let controller = new AbortController();
     let imageResponse;
@@ -37,7 +37,10 @@ function Recipe() {
         );
 
         setRecipeImageUrl(_.get(imageResponse, "data.url"))
-        
+
+        setVisibility("visible")
+        setCharging("hidden")
+
         controller = null
   
       } catch {
@@ -52,7 +55,6 @@ function Recipe() {
         );
 
         setOriginalRecipeUrl(_.get(originalLinkResponse, "data.sourceUrl"))
-        setVisibility("visible")
         controller = null
   
       } catch {
@@ -75,8 +77,11 @@ function Recipe() {
 
       <Title title={params.name} />
 
+      <
+      <p className={utilsStyle.error} style={{visibility: isCharging}} > Caricamento .... </p>
+
       <div className={style.recipeImageContainer} >
-        <img className={style.recipeImage} src={recipeImageUrl} alt="Recipe" />
+        <img className={style.recipeImage} style={{visibility: isVisible}} src={recipeImageUrl} alt="Recipe" />
       </div>
 
       <div className={style.linkContainer}>
